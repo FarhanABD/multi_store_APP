@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_store_app/minor_screen/search.dart';
+import 'package:multi_store_app/widgets/fake_search.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,52 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          title: InkWell(
-            onTap: (() {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SearchScreen()));
-            }),
-            child: Container(
-              height: 35,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.pink, width: 1.4),
-                  borderRadius: BorderRadius.circular(25)),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.pinkAccent,
-                          ),
-                        ),
-                        Text(
-                          "Lets Find Out",
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      height: 32,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          color: Colors.pink[300],
-                          borderRadius: BorderRadius.circular(25)),
-                      child: const Center(
-                        child: Text(
-                          "Search",
-                          style: TextStyle(fontSize: 16, color: Colors.grey),
-                        ),
-                      ),
-                    )
-                  ]),
-            ),
-          ),
+          title: FakeSearch(),
           bottom: const TabBar(
               isScrollable: true,
               indicatorColor: Colors.pinkAccent,
