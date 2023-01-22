@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:multi_store_app/main_screen/customer_home.dart';
 import 'package:multi_store_app/widgets/appbar_widget.dart';
@@ -90,7 +87,10 @@ class _CartScreenState extends State<CartScreen> {
                   borderRadius: BorderRadius.circular(25)),
               child: MaterialButton(
                 onPressed: () {},
-                child: const Text("Checkout"),
+                child: const Text(
+                  "Checkout",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             )
           ],
