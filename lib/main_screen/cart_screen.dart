@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:multi_store_app/main_screen/customer_home.dart';
 import 'package:multi_store_app/widgets/appbar_widget.dart';
+import 'package:multi_store_app/widgets/yellow_button.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -79,19 +80,10 @@ class _CartScreenState extends State<CartScreen> {
                 ),
               ],
             ),
-            Container(
-              height: 35,
-              width: MediaQuery.of(context).size.width * 0.45,
-              decoration: BoxDecoration(
-                  color: Colors.pink[200],
-                  borderRadius: BorderRadius.circular(25)),
-              child: MaterialButton(
-                onPressed: () {},
-                child: const Text(
-                  "Checkout",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+            YellowButton(
+              width: 0.45,
+              label: "Checkout",
+              onPressed: () {},
             )
           ],
         ),

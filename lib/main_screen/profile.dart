@@ -154,9 +154,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       const SizedBox(
                         height: 150,
                         child: Image(
-                            image: AssetImage('images/inapp/logo_tal.jpeg')),
+                            image: AssetImage('images/inapp/logo_talisya.png')),
                       ),
-
                       const ProfileHeaderLabel(
                         headerLabel: "  Account Info  ",
                       ),
